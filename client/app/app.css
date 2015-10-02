@@ -33,7 +33,22 @@
 
 .browsehappy {
     margin: 0.2em 0;
-    background: #ccc;
+    background: #cccccc;
     color: #000;
     padding: 0.2em 0;
+}
+.navbar-default{
+	background-color: #0f2b41 !important;
+	border-bottom: none;
+	color:#fff;
+}
+.navbar-default .navbar-brand,.navbar-default .navbar-nav > li > a{
+	color:#fff;
+}
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-nav > li > a:hover{
+	color:#f5eeee;
+}
+.navbar-default .navbar-nav > .active > a{
+	background-color: #fff;
+	color:#0f2b41;
 }
