@@ -1,5 +1,4 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-
 <header class="hero-unit" id="banner">
   <div ng-hide="isLoggedIn()" class="container">
     <h1>Votepush</h1>
@@ -18,4 +17,20 @@
 	  </div>
   </div>
 </header>
-
+<body>
+	<div class="container" style="margin-top:5px">
+		<div ng-hide="isPoll"><h3>No Poll Created</h3> <a class="btn btn-default" href="/polls/new">Create a poll</a></div>
+		<div class="row">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-6">
+				<div class="list-group">
+					<div class="list-group-item" ng-repeat="myPoll in myPolls">
+						<div class="list-group-item-text"><a href="polls/{{myPoll.fullName}}/{{myPoll.name}}">{{myPoll.name}}</a> <a ng-click="deletePoll(myPoll._id)" class="btn btn-default">Delete</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3"></div>
+		</div>
+	</div>
+</body>
+<!--<canvas id="myChart" width="200" height="200"></canvas>-->
