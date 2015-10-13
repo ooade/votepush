@@ -8,7 +8,7 @@ angular.module('votingappApp')
     $http.get('/api/things').success(function(awesomeThings) {
       $scope.awesomeThings = awesomeThings;
     });
-
+	
     $scope.addThing = function() {
       if($scope.newThing === '') {
         return;
